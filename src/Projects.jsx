@@ -76,16 +76,11 @@ const TOP_SONGS = [
 
 export default function Projects() {
     return (
-        <section
-            className="max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-16"
-            id="work"
-        >
+        <section className="max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-16" id="work">
             <h2 className="font-display font-semibold text-xl mb-8">
                 Projects
             </h2>
-
             <div className="grid md:grid-cols-2 gap-8">
-
                 {PROJECTS.map((p, i) => (
                     <div
                         key={p.name}
@@ -127,7 +122,7 @@ export default function Projects() {
                             VOTELIVE TWEET
                         ========================= */}
                         {p.name === 'VoteLive' && (
-                            <div className="hidden md:block absolute right-6 top-140 z-30 group">
+                            <div className="hidden md:block absolute -right-20 top-140 z-30 group">
 
                                 <div className="translate-x-full -rotate-3 transition-transform duration-500 group-hover:translate-x-0">
 
@@ -393,14 +388,217 @@ export default function Projects() {
 
                     </div>
                 ))}
+                {/* ========================= DSA SIDE QUEST========================= */}
 
+                <div className="mt-0 relative group">
+
+                    {/* Comic annotation */}
+                    <span
+                        className="
+            hidden md:block
+            absolute
+            -top-5
+            right-12
+            z-10
+            bg-white
+            border-2 border-neutral-900
+            rounded-full
+            px-4 py-1.5
+            font-display
+            font-semibold
+            text-[11px]
+            rotate-2
+            shadow-[3px_3px_0px_0px_#171717]
+            transition-transform duration-300
+            group-hover:-rotate-2
+        "
+                    >
+                        character development →
+                    </span>
+
+
+                    <div
+                        className="
+            relative
+            overflow-hidden
+            rounded-[24px]
+            border-2 border-neutral-900
+            bg-neutral-900
+            text-white
+            p-7 md:p-9
+
+            transition-all duration-300
+            hover:-translate-y-1
+            hover:shadow-[7px_7px_0px_0px_#171717]
+        "
+                    >
+
+                        {/* Number */}
+                        <span
+                            className="
+                absolute
+                top-7
+                right-7
+                font-mono
+                text-[11px]
+                text-neutral-500
+            "
+                        >
+                            05
+                        </span>
+
+
+                        {/* Main content */}
+                        <div className="max-w-2xl">
+
+                            <p
+                                className="
+                    font-mono
+                    text-[10px]
+                    uppercase
+                    tracking-widest
+                    text-neutral-500
+                    mb-4
+                "
+                            >
+                                side quest
+                            </p>
+
+
+                            <h3
+                                className="
+                    font-display
+                    font-bold
+                    text-3xl md:text-4xl
+                    tracking-tight
+                "
+                            >
+                                DSA
+                            </h3>
+
+
+                            <p
+                                className="
+                    font-display
+                    font-semibold
+                    text-lg md:text-xl
+                    text-neutral-300
+                    mt-3
+                "
+                            >
+                                currently a noob.
+                            </p>
+
+
+                            <p
+                                className="
+                    font-display
+                    text-sm
+                    leading-relaxed
+                    text-neutral-400
+                    mt-3
+                    max-w-lg
+                "
+                            >
+                                I'm trying to get better at data structures
+                                and algorithms. One problem at a time.
+                                Unfortunately.
+                            </p>
+
+
+                            {/* Bottom */}
+                            <div className="flex items-center gap-4 mt-7">
+
+                                <a
+                                    href="https://leetcode.com/u/ademayo/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="
+                        inline-flex
+                        items-center
+                        gap-2
+                        bg-white
+                        text-neutral-900
+                        border-2 border-white
+                        rounded-xl
+                        px-4 py-2.5
+                        font-display
+                        font-semibold
+                        text-sm
+
+                        transition-all duration-300
+                        hover:-translate-y-1
+                        hover:shadow-[4px_4px_0px_0px_#737373]
+                    "
+                                >
+                                    see my progress
+                                    <span>↗</span>
+                                </a>
+
+
+                                <span
+                                    className="
+                        hidden sm:block
+                        font-display
+                        text-[11px]
+                        italic
+                        text-neutral-500
+                        rotate-[-2deg]
+                    "
+                                >
+                                    we're getting there...
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        {/* Decorative comic marks */}
+                        <span
+                            className="
+                absolute
+                bottom-7
+                right-10
+                text-neutral-700
+                font-display
+                text-6xl
+                font-bold
+                rotate-[-8deg]
+                select-none
+                pointer-events-none
+            "
+                        >
+                            ?
+                        </span>
+
+                        <span
+                            className="
+                absolute
+                bottom-10
+                right-24
+                text-neutral-700
+                font-display
+                text-3xl
+                font-bold
+                rotate-12
+                select-none
+                pointer-events-none
+            "
+                        >
+                            ?
+                        </span>
+
+                    </div>
+
+                </div>
             </div>
 
 
             {/* =========================
                 TOP SONGS + CONTACT
             ========================= */}
-            <div className="max-w-6xl mx-auto py-14 mt-4" id="contact" >
+            <div className="max-w-6xl mx-auto py-14 mt-4"  >
 
                 <div className="grid md:grid-cols-2 gap-12">
 
@@ -419,17 +617,7 @@ export default function Projects() {
                                     Top 5 rn.
                                 </h3>
                             </div>
-                            <span className="
-            hidden md:block
-            font-display
-            text-[11px]
-            italic
-            -rotate-3
-            border-2 border-neutral-900
-            rounded-full
-            px-3 py-1
-            shadow-[2px_2px_0px_0px_#171717]
-        ">
+                            <span className=" hidden md:block font-display text-[11px] italic -rotate-3 border-2 border-neutral-900 rounded-full px-3 py-1 shadow-[2px_2px_0px_0px_#171717]">
                                 unfortunately.
                             </span>
                         </div>
@@ -455,8 +643,7 @@ export default function Projects() {
                                             ? 'hover:rotate-[-1deg]'
                                             : 'hover:rotate-[1deg]'
                                         }
-                `}
-                                >
+                `} >
 
                                     {/* Rank */}
                                     <span className=" font-mono text-xs text-neutral-400 w-5">
@@ -464,18 +651,7 @@ export default function Projects() {
                                     </span>
                                     {/* Fake album artwork */}
                                     <div
-                                        className={`
-                        shrink-0
-                        w-11 h-11
-                        rounded-xl
-                        border-2 border-neutral-900
-                        flex items-center justify-center
-                        font-display
-                        font-bold
-                        text-sm
-                        rotate-[-3deg]
-                        group-hover:rotate-[3deg]
-                        transition-transform duration-300
+                                        className={` shrink-0 w-11 h-11 rounded-xl border-2 border-neutral-900 flex items-center justify-center font-display font-bold text-sm rotate-[-3deg] group-hover:rotate-[3deg] transition-transform duration-300
                         ${i === 0 ? 'bg-neutral-900 text-white' : 'bg-neutral-100 text-neutral-900'}
                     `}>
                                         {i === 0 ? '01' : '♪'}
@@ -487,27 +663,14 @@ export default function Projects() {
                                                 {s.title}
                                             </p>
                                             {i === 0 && (
-                                                <span className="
-                                hidden sm:inline-block
-                                font-mono
-                                text-[8px]
-                                uppercase
-                                border
-                                border-neutral-300
-                                rounded-full
-                                px-2 py-0.5
-                                text-neutral-400
-                            ">
+                                                <span className=" hidden sm:inline-block font-mono text-[8px] uppercase border border-neutral-300 rounded-full px-2 py-0.5 text-neutral-400">
                                                     on repeat
                                                 </span>
                                             )}
-
                                         </div>
-
                                         <p className="text-xs text-neutral-400 mt-0.5">
                                             {s.artist}
                                         </p>
-
                                     </div>
                                     {/* Plays */}
                                     <div className="text-right shrink-0">
@@ -515,76 +678,29 @@ export default function Projects() {
                                         <p className=" font-mono text-[9px] text-neutral-400">plays </p>
                                     </div>
                                     {/* Comic note */}
-                                    <div className="
-                    absolute
-                    left-14
-                    -top-7
-                    z-10
-                    pointer-events-none
-
-                    opacity-0
-                    translate-y-2
-
-                    group-hover:opacity-100
-                    group-hover:translate-y-0
-
-                    transition-all duration-200
-                ">
-                                        <span className="
-                        relative
-                        block
-                        bg-white
-                        border-2 border-neutral-900
-                        rounded-xl
-                        px-3 py-1.5
-                        font-display
-                        font-semibold
-                        text-[10px]
-                        shadow-[3px_3px_0px_0px_#171717]
-                        whitespace-nowrap
-                    ">
+                                    <div className=" left-14 -top-7 absolute z-10 pointer-events-none opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
+                                        <span className=" relative block bg-white border-2 border-neutral-900 rounded-xl px-3 py-1.5 font-display font-semibold text-[10px] shadow-[3px_3px_0px_0px_#171717] whitespace-nowrap">
                                             {s.note}
-
                                             {/* little comic notch */}
-                                            <span className="
-                            absolute
-                            -bottom-[6px]
-                            left-5
-                            w-3 h-3
-                            bg-white
-                            border-r-2
-                            border-b-2
-                            border-neutral-900
-                            rotate-45
-                        "/>
+                                            <span className=" absolute -bottom-[6px] left-5 w-3 h-3 bg-white border-r-2 border-b-2 border-neutral-900 rotate-45" />
                                         </span>
                                     </div>
-
                                 </div>
-
                             ))}
-
                         </div>
-
-
                         {/* Bottom joke */}
                         <div className="mt-5 flex items-center gap-2">
-
                             <span className="font-mono text-[9px] text-neutral-300">
                                 AUG 17 — AUG 23
                             </span>
-
-                            <span className="text-neutral-300">
-                                /
-                            </span>
-
+                            <span className="text-neutral-300">/</span>
                             <span className=" font-display text-[10px] italic text-neutral-400">
                                 no, I don't know why it has 275 plays either.
                             </span>
                         </div>
                     </div>
                     {/* Contact */}
-                    <div>
+                    <div id="contact">
                         <h2 className="font-display font-semibold text-xl mb-2">
                             Get in touch
                         </h2>
