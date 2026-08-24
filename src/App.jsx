@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react'; // this one's still fine, it's not a brand icon
 import Info from './Info';
 import Projects from './Projects';
-import portrait from './assets/portrait.png'
+import portrait from './assets/portrait.jpg'
 import logo from './assets/logo.png'
 import WifiIcon from './icons/WifiIcon';
 import BatteryIcon from './icons/BatteryIcon';
