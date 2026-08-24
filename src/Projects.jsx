@@ -30,7 +30,7 @@ const PROJECTS = [
         name: 'Cascade.js',
         desc: 'A lightweight JavaScript form-validation library.',
         tags: ['npm', 'JavaScript'],
-        link: 'https://cascadejs.vercel.app',
+        link: 'https://cascadejs.netlify.app',
         note: 'less boilerplate pls',
         notePosition: 'right',
     },
@@ -230,6 +230,9 @@ export default function Projects() {
                                 hover:-translate-y-1
                                 hover:rotate-0
                                 hover:shadow-[6px_7px_0px_0px_#171717]
+                                active:-translate-y-1
+                                active:rotate-0
+                                active:shadow-[6px_7px_0px_0px_#171717]
 
                                 ${i === 1
                                     ? '-rotate-1'
@@ -446,6 +449,8 @@ export default function Projects() {
                     transition-all duration-300
                     hover:-translate-y-1
                     hover:shadow-[4px_4px_0px_0px_#171717]
+                    active:-translate-y-1
+                    active:shadow-[4px_4px_0px_0px_#171717]
                     ${i % 2 === 0
                                             ? 'hover:rotate-[-1deg]'
                                             : 'hover:rotate-[1deg]'
