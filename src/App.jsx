@@ -35,7 +35,7 @@ export default function App() {
         <a href="https://x.com/build_pixels" className="w-12 h-12 rounded-full border border-neutral-200 flex items-center justify-center hover:bg-neutral-50">
           <XIcon size={22} />
         </a>
-        <a href="#" className="w-12 h-12 rounded-full border border-neutral-200 flex items-center justify-center hover:bg-neutral-50">
+        <a href="https://www.linkedin.com/in/adeleye-mayowa-75a937359/" className="w-12 h-12 rounded-full border border-neutral-200 flex items-center justify-center hover:bg-neutral-50">
           <LinkedInIcon size={22} />
         </a>
       </div>

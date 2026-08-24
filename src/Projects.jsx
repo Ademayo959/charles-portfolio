@@ -722,7 +722,7 @@ Email: ${email}`;
                                 X
                             </a>
                             <a
-                                href="https://www.linkedin.com/in/YOUR_USERNAME/"
+                                href="https://www.linkedin.com/in/adeleye-mayowa-75a937359/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="underline underline-offset-4 hover:text-neutral-500"
