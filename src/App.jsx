@@ -6,7 +6,7 @@ import { ArrowUpRight } from 'lucide-react'; // this one's still fine, it's not 
 import Info from './Info';
 import Projects from './Projects';
 import portrait from './assets/portrait.jpg'
-import logo from './assets/logo.png'
+import logo from './assets/logo2.jpg'
 import WifiIcon from './icons/WifiIcon';
 import BatteryIcon from './icons/BatteryIcon';
 
@@ -163,8 +163,8 @@ export default function App() {
 
           </div>
           <h1 className="font-display font-bold text-2xl md:text-6xl leading-tight">
-            <h1 className="font-display font-bold text-4xl md:text-4xl leading-tight">
-  // 200-level,<br />building anyway.
+            <h1 className="font-display font-bold text-4xl md:text-5xl leading-tight">
+              // 200-level,<br />building anyway.
             </h1>
           </h1>
         </div>

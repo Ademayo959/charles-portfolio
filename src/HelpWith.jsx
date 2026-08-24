@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import FrontendCarousel from './assets/FrontendCarousel.png'
 import { Computer, Layers, Search, GraduationCap, Plus } from 'lucide-react';
 
 const HELP_WITH = [
@@ -6,7 +7,7 @@ const HELP_WITH = [
     icon: Computer,
     title: 'Frontend',
     desc: 'React interfaces that feel considered, not thrown together.',
-    images: [],
+    images: [FrontendCarousel],
   },
   {
     icon: Layers,
@@ -84,7 +85,7 @@ export default function HelpWith() {
                     </div>
                   ) : (
                     h.images.map((src, idx) => (
-                      <img key={idx} src={src} alt="" className="rounded-xl h-40 object-cover" />
+                      <img key={idx} src={src} alt="" className="rounded-xl h-full object-cover w-full" />
                     ))
                   )}
                 </div>
