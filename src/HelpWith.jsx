@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import FrontendCarousel from './assets/FrontendCarousel.png'
+import FullstackCarousel from './assets/FullstackCarousel.png'
+import SEOCarousel from './assets/SEOCarousel.png'
+import StudentCarousel from './assets/StudentCarousel.png'
 import { Computer, Layers, Search, GraduationCap, Plus } from 'lucide-react';
 
 const HELP_WITH = [
@@ -13,19 +16,19 @@ const HELP_WITH = [
     icon: Layers,
     title: 'Full-stack apps',
     desc: 'React front ends wired to a real Node/Express/Mongo backend.',
-    images: [],
+    images: [FullstackCarousel],
   },
   {
     icon: Search,
     title: 'SEO',
     desc: 'Making sure the things you build can actually be found.',
-    images: [],
+    images: [SEOCarousel],
   },
   {
     icon: GraduationCap,
     title: 'Student-helping tools',
     desc: 'Voting, polling, and course-resource platforms built for how students actually use them.',
-    images: [],
+    images: [StudentCarousel],
   },
 ];
 
@@ -33,10 +36,10 @@ export default function HelpWith() {
   const [active, setActive] = useState(null);
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16">
-      <div className="flex items-center justify-between border-b border-neutral-200 pb-6 mb-2">
-        <h2 className="font-display font-semibold text-3xl">What I can help with</h2>
-        <a href="#work" className="text-xs px-4 font-display py-2.5 rounded-md border border-neutral-200 text-neutral-500 hover:text-neutral-900">
+    <section className="max-w-6xl mx-auto px-4 py-10 md:px-6 md:py-16">
+      <div className="flex items-center justify-between border-b border-neutral-200 pb-4 md:pb-6 mb-2">
+        <h2 className="font-display font-semibold text-xl md:text-3xl">What I can help with</h2>
+        <a href="#work" className="text-xs px-3 py-2 md:px-4 md:py-2.5 font-display rounded-md border border-neutral-200 text-neutral-500 hover:text-neutral-900 whitespace-nowrap">
           See my work
         </a>
       </div>
@@ -53,16 +56,16 @@ export default function HelpWith() {
               onMouseLeave={() => setActive(null)}
               className="border-b border-neutral-200 last:border-b-0"
             >
-              <div className="py-5 flex items-start justify-between gap-6 cursor-pointer">
+              <div className="py-4 md:py-5 flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-6 cursor-pointer">
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full bg-neutral-100 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-neutral-100 flex items-center justify-center shrink-0">
                     <Icon size={19} strokeWidth={2.0} className="text-black" />
                   </div>
-                  <p className="text-2xl font-medium font-display">{h.title}</p>
+                  <p className="text-lg md:text-2xl font-medium font-display">{h.title}</p>
                 </div>
 
-                <div className="flex items-start gap-4 flex-1 justify-end">
-                  <p className="text-sm text-neutral-400 max-w-sm text-right pt-2">{h.desc}</p>
+                <div className="flex items-start gap-3 sm:gap-4 flex-1 justify-between sm:justify-end">
+                  <p className="text-sm text-neutral-400 max-w-full sm:max-w-sm text-left sm:text-right sm:pt-2">{h.desc}</p>
                   <div className="w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center shrink-0">
                     <Plus
                       size={14}
@@ -80,12 +83,12 @@ export default function HelpWith() {
               >
                 <div className="overflow-hidden flex gap-4">
                   {h.images.length === 0 ? (
-                    <div className="w-full h-40 rounded-xl bg-neutral-100 flex items-center justify-center text-xs text-neutral-400">
+                    <div className="w-full h-28 md:h-40 rounded-xl bg-neutral-100 flex items-center justify-center text-xs text-neutral-400">
                       add images for {h.title}
                     </div>
                   ) : (
                     h.images.map((src, idx) => (
-                      <img key={idx} src={src} alt="" className="rounded-xl h-full object-cover w-full" />
+                      <img key={idx} src={src} alt="" className="rounded-xl h-28 md:h-full object-cover w-full" />
                     ))
                   )}
                 </div>
