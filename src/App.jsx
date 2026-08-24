@@ -44,7 +44,7 @@ export default function App() {
       <header className="max-w-6xl mx-auto px-4 py-4 md:px-6 md:py-6 flex items-center justify-between">
         <div className="flex items-center gap-3 md:gap-8">
           <div className="">
-            <img src={logo} alt="logo" className='h-9 w-9 md:h-12 md:w-12' />
+            <img src={logo} alt="logo" className='h-12 w-12 md:h-13 md:w-13' />
           </div>
           <nav className="hidden md:flex items-center gap-8 text-md text-gray-900 font-display">
             <a href="#build" className="hover:text-neutral-900">Building</a>
