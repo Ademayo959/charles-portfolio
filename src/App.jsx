@@ -41,10 +41,10 @@ export default function App() {
       </div>
 
       {/* Top nav */}
-      <header className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-        <div className="flex items-center gap-8">
+      <header className="max-w-6xl mx-auto px-4 py-4 md:px-6 md:py-6 flex items-center justify-between">
+        <div className="flex items-center gap-3 md:gap-8">
           <div className="">
-            <img src={logo} alt="logo" className='h-12 w-12' />
+            <img src={logo} alt="logo" className='h-9 w-9 md:h-12 md:w-12' />
           </div>
           <nav className="hidden md:flex items-center gap-8 text-md text-gray-900 font-display">
             <a href="#build" className="hover:text-neutral-900">Building</a>
@@ -53,44 +53,44 @@ export default function App() {
             <a href="#contact" className="hover:text-neutral-900">Contact</a>
           </nav>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="hidden sm:inline text-xs text-neutral-600">Lagos, Nigeria</span>
-          <span className="text-neutral-500">|</span>
-          <span className='font-display text-[13px]'>{formatted}</span>
-          <div className="relative group">
+        <div className="flex items-center gap-2 md:gap-2">
+          <span className="hidden lg:inline text-xs text-neutral-600">Lagos, Nigeria</span>
+          <span className="hidden lg:inline text-neutral-500">|</span>
+          <span className='hidden sm:inline font-display text-[13px]'>{formatted}</span>
+          <div className="relative group hidden sm:block">
 
             {/* Comic bubble */}
             <div
               className="
-      absolute top-full left-1/2 -translate-x-1/2 mt-4
-      w-64
-      rounded-2xl border-2 border-black bg-white
-      px-5 py-4
-      text-sm leading-relaxed text-black
-      shadow-[4px_4px_0px_0px_#000]
+  absolute top-full right-0 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 mt-4
+  w-56 sm:w-64
+  rounded-2xl border-2 border-black bg-white
+  px-4 py-3 sm:px-5 sm:py-4
+  text-xs sm:text-sm leading-relaxed text-black
+  shadow-[4px_4px_0px_0px_#000]
 
-      opacity-0 invisible
-      -translate-y-2
-      group-hover:opacity-100
-      group-hover:visible
-      group-hover:translate-y-0
+  opacity-0 invisible
+  -translate-y-2
+  group-hover:opacity-100
+  group-hover:visible
+  group-hover:translate-y-0
 
-      transition-all duration-200
-      z-20
-      font-display
-      before:content-['']
-      before:absolute
-      before:left-1/2
-      before:-top-[11px]
-      before:-translate-x-1/2
-      before:w-5
-      before:h-5
-      before:bg-white
-      before:border-l-2
-      before:border-t-2
-      before:border-black
-      before:rotate-45
-    "
+  transition-all duration-200
+  z-20
+  font-display
+  before:content-['']
+  before:absolute
+  before:right-4 before:left-auto sm:before:left-1/2 sm:before:right-auto
+  before:-top-[11px]
+  sm:before:-translate-x-1/2
+  before:w-5
+  before:h-5
+  before:bg-white
+  before:border-l-2
+  before:border-t-2
+  before:border-black
+  before:rotate-45
+"
             >
               Yeah.. they're literally just icons 😅
               <br />
@@ -103,10 +103,10 @@ export default function App() {
             </div>
 
           </div>
-          <button className="px-4 mx-4 py-2 rounded-sm bg-black text-white text-sm font-medium cursor-pointer">
-            Talk with me
-          </button>
         </div>
+        <button className="px-3 py-1.5 md:px-4 md:py-2 md:mx-4 rounded-sm bg-black text-white text-xs md:text-sm font-medium cursor-pointer whitespace-nowrap">
+          Talk with me
+        </button>
       </header>
 
       {/* Hero */}
