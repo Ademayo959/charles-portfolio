@@ -21,11 +21,7 @@ const HELP_WITH = [
   { title: 'DSA & problem solving', desc: 'Currently deep in NeetCode/LeetCode, prepping for global-standard technical interviews.' },
 ];
 
-const TOP_SONGS = [
-  { rank: 1, title: '—', artist: '—' },
-  { rank: 2, title: '—', artist: '—' },
-  { rank: 3, title: '—', artist: '—' },
-];
+
 
 function Row({ title, subtitle, date, link }) {
   return (
@@ -76,31 +72,7 @@ export default function Info() {
       {/* "I can help you with" — services-style list from the reference */}
       <HelpWith />
 
-      {/* Top songs + contact */}
-      <section className="max-w-6xl mx-auto px-6 py-14" id="contact">
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <p className="text-xs font-mono uppercase tracking-wide text-neutral-400 mb-3">Top 3 rn</p>
-            <ul className="space-y-2">
-              {TOP_SONGS.map((s) => (
-                <li key={s.rank} className="text-sm flex gap-3">
-                  <span className="text-neutral-300 font-mono">0{s.rank}</span>
-                  <span>{s.title} — <span className="text-neutral-400">{s.artist}</span></span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className="font-display font-semibold text-xl mb-3">Get in touch</h2>
-            <p className="text-sm text-neutral-400 mb-4">your-email@example.com</p>
-            <div className="flex gap-3 text-sm">
-              <a href="#" className="underline underline-offset-4">GitHub</a>
-              <a href="#" className="underline underline-offset-4">X</a>
-              <a href="#" className="underline underline-offset-4">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 }
