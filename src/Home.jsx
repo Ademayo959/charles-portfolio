@@ -107,9 +107,9 @@ export default function App() {
 
                     </div>
                 </div>
-                <button className="px-3 py-1.5 md:px-4 md:py-2 md:mx-4 rounded-sm bg-black text-white text-xs md:text-sm font-medium cursor-pointer whitespace-nowrap">
+                <a href='https://wa.me/2347039889722?text=Hey%20Mayowa%2C%20I%20found%20your%20portfolio.' className="px-3 py-1.5 md:px-4 md:py-2 md:mx-4 rounded-sm bg-black text-white text-xs md:text-sm font-medium cursor-pointer whitespace-nowrap">
                     Talk with me
-                </button>
+                </a>
             </header>
 
             {/* Hero */}
