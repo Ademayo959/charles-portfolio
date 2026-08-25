@@ -116,7 +116,7 @@ export default function BugGame({ onClose }) {
                                 Your code has bugs.
                             </h3>
                             <p className=" font-display text-sm text-neutral-400 mt-1 max-w-xs">
-                                You have 20 seconds to catch
+                                You have 10 seconds to catch
                                 as many as possible.
                             </p>
                             <button onClick={startGame} className=" mt-5 bg-neutral-900 text-white border-2 border-neutral-900 rounded-xl px-5 py-2.5 font-display font-semibold text-sm transition-all hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_#a3a3a3]">

@@ -111,13 +111,11 @@ export default function App() {
                     Talk with me
                 </a>
             </header>
-
             {/* Hero */}
             <section className="max-w-6xl mx-auto px-6 pt-18 pb-20 grid md:grid-cols-2 gap-10 items-start">
                 <div>
                     {/* Profile photo — add yours here */}
                     <div className="relative group w-24 h-24 mb-6">
-
                         {/* Comic bubble */}
                         <div
                             className="

@@ -5,7 +5,7 @@ const BUILD_HISTORY = [
   { title: 'Reekol', subtitle: 'Course-material sharing platform, in progress', date: '2026', link: 'https://reekol.vercel.app' },
   { title: 'VoteLive', subtitle: 'Adopted for a real departmental election', date: '2026', link: 'https://votelive.click' },
   { title: 'Cascade.js', subtitle: 'JS form-validation library, published on npm', date: '2025', link: 'https://cascadejs.vercel.app' },
-  { title: 'FUTAevents', subtitle: 'A capus event discovery platform', date: '2026', link: 'https://futaevents.vercel.app' },
+  { title: 'FUTAevents', subtitle: 'A campus event discovery platform', date: '2026', link: 'https://futaevents.vercel.app' },
 ];
 
 const SKILLS = [
