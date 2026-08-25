@@ -34,6 +34,14 @@ const PROJECTS = [
         note: 'less boilerplate pls',
         notePosition: 'right',
     },
+    {
+        name: 'My Portfolio',
+        desc: "Well you're in it now, what do you think???",
+        tags: ['React', 'Tailwind'],
+        link: 'https://mayowaa.vercel.app',
+        note: 'cool right',
+        notePosition: 'right',
+    },
 ];
 
 const TOP_SONGS = [
