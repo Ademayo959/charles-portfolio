@@ -1,5 +1,1072 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
 
 @theme {
   --font-display: "Bricolage Grotesque", sans-serif;
+}
+
+
+
+
+/* =========================================================
+   NEWSPAPER PAGE
+========================================================= */
+
+.newspaper-page {
+    min-height: 100vh;
+    padding: 30px 14px 70px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #d9d5cc 0%,
+            #c5c0b7 100%
+        );
+
+    color: #181714;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   PAPER
+========================================================= */
+
+.newspaper-sheet {
+    position: relative;
+
+    max-width: 1180px;
+    margin: 0 auto;
+
+    min-height: 100vh;
+
+    padding: 34px 42px;
+
+    background-color: #eee9dc;
+
+    box-shadow:
+        0 3px 3px rgba(0, 0, 0, 0.15),
+        0 15px 30px rgba(0, 0, 0, 0.20),
+        0 35px 55px rgba(0, 0, 0, 0.18);
+
+    transform:
+        perspective(1600px)
+        rotateX(1deg)
+        rotateZ(-0.25deg);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PAPER GRAIN
+========================================================= */
+
+.paper-noise {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.48;
+
+    background-image:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(40, 30, 15, 0.10) 0.5px,
+            transparent 0.8px
+        ),
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(40, 30, 15, 0.08) 0.5px,
+            transparent 0.8px
+        ),
+        radial-gradient(
+            circle at 35% 75%,
+            rgba(40, 30, 15, 0.07) 0.6px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 75% 85%,
+            rgba(40, 30, 15, 0.06) 0.5px,
+            transparent 1px
+        );
+
+    background-size:
+        6px 6px,
+        9px 9px,
+        13px 13px,
+        17px 17px;
+
+    mix-blend-mode: multiply;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   CRUMPLED PAPER FOLDS
+========================================================= */
+
+.paper-fold {
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 21;
+
+    opacity: 0.45;
+
+    mix-blend-mode: multiply;
+}
+
+.paper-fold-one {
+    top: -15%;
+    left: 22%;
+
+    width: 180px;
+    height: 130%;
+
+    transform: rotate(8deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(70, 50, 25, 0.025) 25%,
+            rgba(60, 40, 20, 0.08) 48%,
+            rgba(255, 255, 255, 0.22) 53%,
+            rgba(255, 255, 255, 0.05) 65%,
+            transparent 100%
+        );
+
+    filter: blur(1px);
+}
+
+.paper-fold-two {
+    top: 43%;
+    left: -10%;
+
+    width: 125%;
+    height: 130px;
+
+    transform: rotate(-3deg);
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(60, 40, 20, 0.06) 45%,
+            rgba(255, 255, 255, 0.18) 53%,
+            transparent
+        );
+
+    filter: blur(1px);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.newspaper-content {
+    position: relative;
+    z-index: 30;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.newspaper-topbar {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #181714;
+
+    padding-bottom: 7px;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MASTHEAD
+========================================================= */
+
+.masthead {
+    padding: 18px 0 13px;
+
+    border-bottom: 5px double #181714;
+
+    text-align: center;
+}
+
+.masthead-small {
+    font-family: 'DM Mono', monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 0.2em;
+
+    margin-bottom: 10px;
+}
+
+.masthead-title {
+    margin: 0;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: clamp(4rem, 12vw, 9.5rem);
+
+    font-weight: 900;
+
+    line-height: 0.70;
+
+    letter-spacing: -0.085em;
+}
+
+.masthead-title-bottom {
+    margin-top: 14px;
+}
+
+.masthead-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 24px;
+
+    padding-top: 8px;
+
+    border-top: 1px solid #181714;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 0.08em;
+}
+
+.masthead-bottom a {
+    color: inherit;
+
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+}
+
+
+/* =========================================================
+   LEAD STORY
+========================================================= */
+
+.lead-story {
+    display: grid;
+
+    grid-template-columns: 1.7fr 0.8fr;
+
+    border-bottom: 3px solid #181714;
+}
+
+.lead-article {
+    padding: 30px 32px 28px 0;
+
+    border-right: 2px solid #181714;
+}
+
+.article-kicker,
+.mini-label {
+    font-family: 'DM Mono', monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 0.16em;
+
+    margin-bottom: 10px;
+}
+
+.lead-article h2 {
+    margin: 0;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: clamp(4rem, 8vw, 7rem);
+
+    font-weight: 900;
+
+    line-height: 0.76;
+
+    letter-spacing: -0.075em;
+}
+
+.article-meta {
+    margin-top: 22px;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 0.08em;
+}
+
+.lead-copy {
+    max-width: 720px;
+
+    margin-top: 18px;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    line-height: 1.35;
+}
+
+.article-columns {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+
+    margin-top: 15px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #777;
+}
+
+.article-columns p {
+    margin: 0;
+
+    font-size: 10px;
+
+    line-height: 1.45;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.lead-photo {
+    padding: 30px 0 28px 28px;
+}
+
+.photo-frame {
+    position: relative;
+
+    aspect-ratio: 4 / 3;
+
+    padding: 9px;
+
+    border: 2px solid #181714;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #d8d3c7 0,
+            #d8d3c7 2px,
+            #c8c2b5 2px,
+            #c8c2b5 4px
+        );
+
+    border: 1px solid #181714;
+
+    text-align: center;
+
+    transform: rotate(-1deg);
+}
+
+.photo-placeholder span {
+    font-family: var(--font-display), sans-serif;
+
+    font-size: 36px;
+
+    font-weight: 900;
+
+    letter-spacing: -0.06em;
+}
+
+.photo-placeholder small {
+    font-family: 'DM Mono', monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 0.2em;
+}
+
+.photo-caption {
+    margin-top: 7px;
+
+    font-size: 8px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   NEWS GRID
+========================================================= */
+
+.news-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-bottom: 2px solid #181714;
+}
+
+.news-column {
+    padding: 19px 17px 20px 0;
+}
+
+.news-column:not(:first-child) {
+    padding-left: 17px;
+
+    border-left: 1px solid #181714;
+}
+
+.news-column-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 7px;
+
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #181714;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 0.13em;
+}
+
+.news-column h3 {
+    margin: 0;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    line-height: 0.88;
+
+    letter-spacing: -0.045em;
+}
+
+.news-column p {
+    margin-top: 10px;
+
+    font-size: 9px;
+
+    line-height: 1.45;
+
+    text-align: justify;
+}
+
+.news-column .story-note {
+    font-family: var(--font-display), sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    font-style: italic;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   NEWS STRIP
+========================================================= */
+
+.news-strip {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-bottom: 2px solid #181714;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+}
+
+.news-strip div {
+    padding: 8px 10px;
+}
+
+.news-strip div:not(:first-child) {
+    border-left: 1px solid #181714;
+}
+
+
+/* =========================================================
+   SECTION BLOCK
+========================================================= */
+
+.section-block {
+    padding: 25px 0;
+
+    border-bottom: 3px solid #181714;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 17px;
+
+    border-bottom: 2px solid #181714;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: clamp(2.5rem, 5vw, 5rem);
+
+    font-weight: 900;
+
+    line-height: 0.78;
+
+    letter-spacing: -0.065em;
+}
+
+.section-heading span {
+    font-family: 'DM Mono', monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   INTERESTS
+========================================================= */
+
+.interests-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 0;
+}
+
+.interest-item {
+    padding-right: 15px;
+}
+
+.interest-item:not(:first-child) {
+    padding-left: 15px;
+
+    border-left: 1px solid #181714;
+}
+
+.interest-number {
+    margin-bottom: 5px;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 7px;
+}
+
+.interest-item h3 {
+    margin: 0;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    line-height: 0.9;
+}
+
+.interest-item p {
+    margin-top: 7px;
+
+    font-size: 8px;
+
+    line-height: 1.4;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   GOATS + MOVIES
+========================================================= */
+
+.bottom-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-bottom: 3px solid #181714;
+}
+
+.bottom-section {
+    padding: 28px 28px 28px 0;
+}
+
+.bottom-section + .bottom-section {
+    padding-left: 28px;
+
+    border-left: 2px solid #181714;
+}
+
+.bottom-section h2 {
+    margin: 0;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    font-weight: 900;
+
+    line-height: 0.75;
+
+    letter-spacing: -0.07em;
+}
+
+.section-intro {
+    margin: 13px 0 17px;
+
+    font-size: 9px;
+
+    max-width: 360px;
+}
+
+
+/* =========================================================
+   RANKING
+========================================================= */
+
+.rank-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 7px 0;
+
+    border-bottom: 1px solid #777;
+}
+
+.rank-item span {
+    width: 25px;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 8px;
+}
+
+.rank-item strong {
+    font-family: var(--font-display), sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MOVIES
+========================================================= */
+
+.movie-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 7px 0;
+
+    border-bottom: 1px solid #777;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: 12px;
+}
+
+.movie-item span {
+    width: 20px;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   EDITOR NOTE
+========================================================= */
+
+.editor-note {
+    margin-top: 17px;
+
+    padding: 10px;
+
+    border: 2px solid #181714;
+
+    transform: rotate(0.7deg);
+}
+
+.editor-note span {
+    font-family: 'DM Mono', monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 0.15em;
+}
+
+.editor-note p {
+    margin: 5px 0 0;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.tiny-note {
+    margin-top: 10px;
+
+    font-size: 7px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   CLASSIFIEDS
+========================================================= */
+
+.classifieds {
+    padding: 20px 0;
+
+    border-bottom: 3px solid #181714;
+}
+
+.classified-title {
+    padding: 7px;
+
+    border-top: 1px solid #181714;
+
+    border-bottom: 1px solid #181714;
+
+    text-align: center;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 8px;
+
+    letter-spacing: 0.25em;
+}
+
+.classified-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 15px;
+
+    text-align: center;
+}
+
+.classified-grid div:not(:first-child) {
+    border-left: 1px solid #aaa;
+
+    padding-left: 18px;
+}
+
+.classified-grid h3 {
+    margin: 0;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 900;
+}
+
+.classified-grid p {
+    margin-top: 5px;
+
+    font-size: 7px;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.newspaper-footer {
+    padding: 28px 0 8px;
+
+    text-align: center;
+}
+
+.newspaper-footer h2 {
+    margin: 0;
+
+    font-family: var(--font-display), sans-serif;
+
+    font-size: clamp(3rem, 7vw, 7rem);
+
+    font-weight: 900;
+
+    line-height: 0.75;
+
+    letter-spacing: -0.075em;
+}
+
+.newspaper-footer p {
+    margin-top: 12px;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 7px;
+
+    letter-spacing: 0.15em;
+}
+
+.newspaper-footer a {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: inherit;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 8px;
+
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .newspaper-page {
+        padding: 10px 6px 40px;
+    }
+
+    .newspaper-sheet {
+        padding: 20px 17px;
+
+        transform:
+            perspective(1200px)
+            rotateZ(-0.15deg);
+    }
+
+    .newspaper-topbar {
+        font-size: 6px;
+    }
+
+    .masthead {
+        padding-top: 18px;
+    }
+
+    .masthead-title {
+        font-size: 19vw;
+    }
+
+    .masthead-bottom {
+        gap: 8px;
+
+        font-size: 6px;
+    }
+
+    .lead-story {
+        display: block;
+    }
+
+    .lead-article {
+        padding-right: 0;
+
+        border-right: 0;
+    }
+
+    .lead-article h2 {
+        font-size: 19vw;
+    }
+
+    .lead-copy {
+        font-size: 14px;
+    }
+
+    .article-columns {
+        gap: 14px;
+    }
+
+    .article-columns p {
+        font-size: 8px;
+    }
+
+    .lead-photo {
+        padding: 0 0 20px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .news-column {
+        padding: 15px 10px 15px 0;
+    }
+
+    .news-column:nth-child(2n) {
+        padding-left: 10px;
+
+        border-left: 1px solid #181714;
+    }
+
+    .news-column:nth-child(n + 3) {
+        border-top: 1px solid #181714;
+    }
+
+    .news-column h3 {
+        font-size: 16px;
+    }
+
+    .news-column p {
+        font-size: 8px;
+    }
+
+    .news-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .news-strip div:not(:first-child) {
+        border-left: 0;
+
+        border-top: 1px solid #181714;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading h2 {
+        font-size: 12vw;
+    }
+
+    .section-heading span {
+        display: block;
+
+        margin-top: 10px;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .interest-item {
+        padding: 12px 10px 12px 0;
+    }
+
+    .interest-item:not(:first-child) {
+        padding-left: 10px;
+    }
+
+    .interest-item:nth-child(odd) {
+        border-left: 0;
+    }
+
+    .interest-item:nth-child(n + 3) {
+        border-top: 1px solid #181714;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-section {
+        padding: 25px 0;
+    }
+
+    .bottom-section + .bottom-section {
+        padding-left: 0;
+
+        border-left: 0;
+
+        border-top: 2px solid #181714;
+    }
+
+    .bottom-section h2 {
+        font-size: 17vw;
+    }
+
+    .classified-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+    }
+
+    .classified-grid div:not(:first-child) {
+        padding-left: 10px;
+    }
+
+    .classified-grid h3 {
+        font-size: 10px;
+    }
+
+    .classified-grid p {
+        font-size: 7px;
+    }
 }
