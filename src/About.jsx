@@ -129,7 +129,6 @@ export default function About() {
                     <p className=" font-mono text-[10px] uppercase tracking-[0.2em] text-neutral-400 mb-4">About / 01</p>
                     <Link to="/" className=" font-display text-[10px] uppercase tracking-[0.2em] text-neutral-400 mb-4 hover:text-black">Back Home</Link>
                 </div>
-
                 <h1 className="
                     font-display
                     font-bold
